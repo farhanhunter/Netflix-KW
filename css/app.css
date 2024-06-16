@@ -1,0 +1,365 @@
+/* CSS umum */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-radius: 0.25rem;
+  --netflix-white: rgb(255, 255, 255);
+  --netflix-black: #000;
+  --question-bg: rgba(45, 45, 45, 1);
+  --netflix-red: rgb(229, 9, 20);
+  --netflix-hover-red: rgb(193, 17, 25);
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--netflix-black);
+}
+
+.login-section {
+  position: relative;
+  height: 87.5vh;
+  background: url(../img/bg.jpg) center no-repeat;
+  background-size: cover;
+}
+
+.logo {
+  position: absolute;
+  left: 9rem;
+  top: 1.25rem;
+  width: 11rem;
+  object-fit: contain;
+  padding-left: 20px;
+}
+
+.language-picker,
+.language-picker-footer {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  word-spacing: 0.3rem;
+  font-size: 1rem;
+  color: var(--netflix-white);
+  background-color: transparent;
+  border-radius: var(--primary-radius);
+  border: 1px solid #333;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  font-weight: 400;
+}
+
+/* Mengatur posisi khusus untuk .language-picker */
+.language-picker {
+  position: absolute;
+  right: 16.85rem;
+  top: 1.75rem;
+  padding-left: 1rem;
+}
+
+/* Mengatur gaya khusus untuk .language-picker-footer */
+.language-picker-footer {
+  margin-top: 20px;
+  margin: 0.75rem 0;
+  position: relative;
+  right: 0;
+  top: 0;
+}
+
+.fa-solid {
+  padding-right: 1rem;
+}
+
+.fa-language::before {
+  padding-right: 1rem;
+}
+
+.login-button {
+  position: absolute;
+  right: 10.5rem;
+  top: 1.75rem;
+  padding: 0.45rem 0.9rem;
+  font-size: 0.875rem;
+  color: var(--netflix-white);
+  background-color: var(--netflix-red);
+  border-radius: var(--primary-radius);
+  cursor: pointer;
+  font-weight: 600;
+  border: none;
+}
+
+.login-button:hover {
+  background-color: var(--netflix-hover-red);
+}
+
+.login-footer {
+  /* Mengatur kembali posisi */
+  position: relative;
+  text-align: center;
+  z-index: 1;
+  color: white;
+  padding: 2rem;
+  margin: 20px auto; /* Jarak dari elemen sebelumnya */
+  left: 0;
+  right: 0;
+}
+
+.login-footer > h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.login-body {
+  position: absolute;
+  top: 36.5%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  z-index: 1;
+  color: white;
+  padding: 20px;
+  left: 0;
+  right: 0;
+}
+
+.login-body > h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+.login-body > h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 1.25rem;
+}
+
+.login-body > h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.login-input {
+  margin-top: 1.35rem;
+}
+
+.login-input > form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.login-input > form > input {
+  padding: 1.65rem 1rem;
+  outline-width: 0;
+  height: 30px;
+  width: 27.5%;
+  border: none;
+  max-width: 600px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 1px solid gray;
+  border-radius: var(--primary-radius);
+}
+
+.login-input > form > input::placeholder {
+  font-size: 1rem;
+  color: lightgray;
+}
+
+.login-get-started {
+  padding: 0.85rem 1.25rem;
+  font-size: 1.5rem;
+  color: var(--netflix-white);
+  background-color: var(--netflix-red);
+  border-radius: var(--primary-radius);
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.login-gradient {
+  width: 100%;
+  z-index: 1;
+  height: 87.5vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 0,
+    rgba(0, 0, 0, 0) 60%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+}
+
+.content-section {
+  width: 100%;
+  height: auto;
+  color: var(--netflix-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4.5rem 10.5rem;
+  border-top: 0.5rem solid #222;
+  gap: 2rem;
+}
+
+.content-title {
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+.content-description {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.image-container {
+  width: 50%;
+  height: auto;
+  line-height: 0;
+}
+
+.image-container > img {
+  width: 100%;
+  height: auto;
+}
+
+.content-section-left {
+  flex-direction: row-reverse;
+}
+
+.content-section-right {
+  flex-direction: row;
+}
+
+.television,
+.laptop {
+  background-color: rgba(0, 0, 0, 0.8);
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 0,
+    rgba(0, 0, 0, 0) 60%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  flex-direction: row;
+}
+
+.mobile,
+.children {
+  background-color: rgba(0, 0, 0, 0.8);
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 0,
+    rgba(0, 0, 0, 0) 60%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+}
+
+.faq-section {
+  max-width: 100%;
+  height: auto;
+  border-top: 0.5rem solid #222;
+  /* padding: 4.5rem 0; */
+  padding-top: 4rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--netflix-white);
+}
+
+.faq-header {
+  font-size: 3rem;
+  font-weight: 900;
+  padding-bottom: 1rem;
+}
+
+.question-container {
+  width: 77%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: 0.7rem;
+}
+
+.question-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  background-color: var(--question-bg);
+
+  transition-duration: 250ms;
+  transition-property: background-color;
+  transition-timing-function: cubic-bezier(0.9, 0, 0.51, 1);
+}
+
+.question-box:hover {
+  background-color: #444;
+  cursor: pointer;
+}
+
+.question {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.plus-icon {
+  height: fit-content;
+  font-size: 2rem;
+}
+
+.main-footer {
+  width: 100%;
+  padding: 3.75rem 10.5rem 3.75rem 10.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  border-top: 0.5rem solid #222;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.intro-text {
+  font-size: 1.5rem;
+  font-weight: 400;
+  padding: 0.75rem 0;
+}
+
+.phone-number,
+.link {
+  text-decoration: none;
+  color: var(--netflix-white);
+}
+
+.phone-number:hover {
+  cursor: pointer;
+  color: var(--netflix-red);
+}
+
+.link:hover {
+  cursor: pointer;
+  color: var(--netflix-red);
+}
+
+.useful-links {
+  padding: 1.5rem 0;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  column-gap: 0.75rem;
+  row-gap: 0.75rem;
+}
+
+.page-title {
+  font-size: 14px;
+  font-weight: 400;
+  padding: 0.75rem 0;
+}
